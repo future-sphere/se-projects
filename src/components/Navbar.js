@@ -1,6 +1,6 @@
 import { ArrowDownIcon } from '@heroicons/react/solid';
 import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useRoutes } from 'react-router-dom';
 
 type Props = {};
 
@@ -12,12 +12,12 @@ const Navbar = (props: Props) => {
 
   useEffect(() => {
     if (
-      location.pathname.split('/').length > 2 &&
+      location.pathname.split('/').length > 3 &&
       location.pathname.split('/')[2] == 'projects'
     ) {
       setShow(false);
     }
-  }, [location]);
+  }, [location.pathname]);
 
   return (
     <div className='relative'>
