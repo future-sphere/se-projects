@@ -1,4 +1,5 @@
 import Counter from './projects/react/counter-app';
+import Todolist from './projects/react/Todolist';
 import { ProjectTypeMap } from './types';
 
 export function classNames(...classes) {
@@ -59,6 +60,7 @@ export const projects: ProjectTypeMap = {
       description: 'A simple to-do app that uses React Hooks and Tailwind CSS.',
       estimated_hours: 6,
       subject: 'react',
+      component: <Todolist />,
     },
     {
       title: 'Kanban Board',
