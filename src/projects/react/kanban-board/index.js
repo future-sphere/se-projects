@@ -1,4 +1,8 @@
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  TrashIcon,
+} from '@heroicons/react/outline';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import React from 'react';
 
@@ -55,6 +59,12 @@ const KanbanBoard = () => {
     setCol(nextCol);
   };
 
+  const handleDeleteItem = (colIndex, itemIndex) => {
+    const nextCol = [...col];
+    nextCol[colIndex].todos.splice(itemIndex, 1);
+    setCol(nextCol);
+  };
+
   return (
     <div className='grid max-w-5xl grid-cols-4 py-20 mx-auto gap-x-4'>
       {col.map((v, i) => (
@@ -65,6 +75,7 @@ const KanbanBoard = () => {
           key={i}
           handleAddTodo={handleAddTodo}
           handleShift={handleShift}
+          handleDeleteItem={handleDeleteItem}
           isFirst={i === 0}
           isLast={i === col.length - 1}
         />
@@ -81,6 +92,7 @@ function Column({
   handleShift,
   isFirst,
   isLast,
+  handleDeleteItem,
 }) {
   return (
     <div className='relative w-full'>
@@ -94,6 +106,7 @@ function Column({
       <div className='px-2 py-2 space-y-2 bg-gray-100 h-96'>
         {data.todos.map((v, i) => (
           <Item
+            handleDeleteItem={handleDeleteItem}
             key={i}
             itemTitle={v}
             isFirst={isFirst}
@@ -123,24 +136,40 @@ function Column({
   );
 }
 
-function Item({ handleShift, itemTitle, isFirst, isLast, index, colIndex }) {
+function Item({
+  handleShift,
+  itemTitle,
+  isFirst,
+  isLast,
+  index,
+  colIndex,
+  handleDeleteItem,
+}) {
   return (
-    <div className='w-full bg-white rounded-xl py-2.5 px-4 flex justify-between items-center text-base font-bold hover:bg-gray-50 duration-75 cursor-pointer'>
-      <ChevronLeftIcon
-        className={`w-5 ${isFirst ? 'text-gray-300 cursor-not-allowed' : ''}`}
-        onClick={() => handleShift(index, colIndex, colIndex - 1)}
-      >
-        Prev
-      </ChevronLeftIcon>
+    <div className='flex w-full hover:space-x-2 group'>
+      <div className='bg-white w-full rounded-xl py-2.5 px-4 flex justify-between items-center text-base font-bold hover:bg-gray-50 duration-200 cursor-pointer group-hover:w-3/4'>
+        <ChevronLeftIcon
+          className={`w-5 ${isFirst ? 'text-gray-300 cursor-not-allowed' : ''}`}
+          onClick={() => handleShift(index, colIndex, colIndex - 1)}
+        >
+          Prev
+        </ChevronLeftIcon>
 
-      <span>{itemTitle}</span>
+        <span>{itemTitle}</span>
 
-      <ChevronRightIcon
-        className={`w-5 ${isLast ? 'text-gray-300 cursor-not-allowed' : ''}`}
-        onClick={() => handleShift(index, colIndex, colIndex + 1)}
-      >
-        Next
-      </ChevronRightIcon>
+        <ChevronRightIcon
+          className={`w-5 ${isLast ? 'text-gray-300 cursor-not-allowed' : ''}`}
+          onClick={() => handleShift(index, colIndex, colIndex + 1)}
+        >
+          Next
+        </ChevronRightIcon>
+      </div>
+      <div className='flex items-center justify-center w-0 duration-75 bg-red-500 cursor-pointer rounded-xl group-hover:w-1/4 hover:bg-red-700'>
+        <TrashIcon
+          onClick={() => handleDeleteItem(colIndex, index)}
+          className='h-5 text-white'
+        />
+      </div>
     </div>
   );
 }
