@@ -1,5 +1,6 @@
 import Counter from './projects/react/counter-app';
-import Todolist from './projects/react/Todolist';
+import KanbanBoard from './projects/react/kanban-board';
+import Todolist from './projects/react/to-do-app';
 import { ProjectTypeMap } from './types';
 
 export function classNames(...classes) {
@@ -7,7 +8,7 @@ export function classNames(...classes) {
 }
 
 export const projects: ProjectTypeMap = {
-  'html': [
+  html: [
     {
       title: 'Simple Personal Intro Web Page',
       slug: 'simple-personal-intro-web-page',
@@ -24,7 +25,7 @@ export const projects: ProjectTypeMap = {
       subject: 'html',
     },
   ],
-  'css': [
+  css: [
     {
       title: 'Landkit components',
       slug: 'landkit-components',
@@ -34,7 +35,7 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
   ],
-  'javaScript': [
+  javaScript: [
     {
       title: 'Array method exercises',
       slug: 'array-method-exercises',
@@ -44,7 +45,7 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
   ],
-  'react': [
+  react: [
     {
       title: 'Counter App',
       slug: 'counter-app',
@@ -69,6 +70,7 @@ export const projects: ProjectTypeMap = {
         'Advanced usage of two-dimentional React State that involves array states and methods.',
       estimated_hours: 8,
       subject: 'react',
+      component: <KanbanBoard />,
     },
     {
       title: 'Product management app',
@@ -95,7 +97,7 @@ export const projects: ProjectTypeMap = {
       subject: 'react',
     },
   ],
-  'backend': [
+  backend: [
     {
       title: 'Movies API',
       slug: 'movies-api',

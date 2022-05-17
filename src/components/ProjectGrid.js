@@ -10,7 +10,7 @@ type Props = {
 
 const ProjectGrid = ({ projects, subject }: Props) => {
   return (
-    <div className='grid grid-cols-1 divide-y gap-y-8 mt-4'>
+    <div className='grid grid-cols-1 mt-4 divide-y gap-y-8'>
       {projects.map((project) => (
         <div
           key={project.slug}
@@ -28,10 +28,10 @@ const ProjectGrid = ({ projects, subject }: Props) => {
 
           <p className='text-xl font-semibold text-gray-900'>{project.title}</p>
           <p className='mt-3 text-base text-gray-500'>{project.description}</p>
-          <div className='mt-3 flex gap-5 items-center  font-mono text-xs'>
+          <div className='flex items-center gap-5 mt-3 font-mono text-xs'>
             <Link
               to={`/${subject}/projects/${project.slug}`}
-              className='flex gap-1 items-center text-blue-600 hover:text-blue-900'
+              className='flex items-center gap-1 text-blue-600 hover:text-blue-900'
             >
               <EyeIcon className='h-4' />
               View Project
@@ -39,7 +39,8 @@ const ProjectGrid = ({ projects, subject }: Props) => {
             <a
               target={'_blank'}
               href={`https://github.com/future-sphere/se-projects/blob/master/src/projects/${project.subject}/${project.slug}/index.js`}
-              className='flex gap-1 items-center text-blue-600 hover:text-blue-900'
+              className='flex items-center gap-1 text-blue-600 hover:text-blue-900'
+              rel='noreferrer'
             >
               <CodeIcon className='h-4' />
               View Source Code
