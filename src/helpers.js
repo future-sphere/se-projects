@@ -1,5 +1,6 @@
 import Counter from './projects/react/counter-app';
 import KanbanBoard from './projects/react/kanban-board';
+import ProductManager from './projects/react/product-management-app';
 import Todolist from './projects/react/to-do-app';
 import { ProjectTypeMap } from './types';
 
@@ -79,6 +80,7 @@ export const projects: ProjectTypeMap = {
         'A product management app that uses React Hooks and Tailwind CSS, including a pop up modal that allows users to input product information into a form then display the list of products as a result that allows for edition and deletion.',
       estimated_hours: 12,
       subject: 'react',
+      component: <ProductManager />,
     },
     {
       title: 'Pokedex app',

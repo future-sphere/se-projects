@@ -4,15 +4,13 @@ import ProjectGrid from '../components/ProjectGrid';
 import Wrapper from '../components/Wrapper';
 import { projects } from '../helpers';
 
-type Props = {};
-
-const ProjectsPage = (props: Props) => {
+const ProjectsPage = () => {
   const location = useLocation();
   const subject = location.pathname.split('/')[1];
   return (
     <Wrapper>
       <div>
-        <h1 className='text-4xl font-extrabold text-black tracking-wide uppercase'>
+        <h1 className='text-4xl font-extrabold tracking-wide text-black uppercase'>
           {subject} Projects
         </h1>
         <ProjectGrid projects={projects[subject]} subject={subject} />
