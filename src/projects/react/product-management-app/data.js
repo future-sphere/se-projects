@@ -1,48 +1,41 @@
-interface Category {
+export interface Category {
   id: number;
   name: string;
   slug: string;
 }
 
-const categories = [
+export const categories = [
   {
-    id: 1,
     name: 'RPG',
     slug: 'rpg',
   },
   {
-    id: 2,
     name: 'MMORPG',
     slug: 'mmorpg',
   },
   {
-    id: 3,
     name: 'Strategy',
     slug: 'strategy',
   },
   {
-    id: 4,
     name: 'Simulator',
     slug: 'simulator',
   },
   {
-    id: 5,
     name: 'Sports',
     slug: 'sports',
   },
   {
-    id: 6,
     name: 'Racing',
     slug: 'racing',
   },
   {
-    id: 7,
     name: 'Adventure',
     slug: 'adventure',
   },
 ];
 
-interface Game {
+export interface Game {
   id: number;
   title: string;
   slug: string;
@@ -52,7 +45,7 @@ interface Game {
   image: string;
 }
 
-const games: Game[] = [
+export const games: Game[] = [
   {
     id: 1,
     title: 'The Witcher 3',

@@ -66,7 +66,7 @@ const KanbanBoard = () => {
   };
 
   return (
-    <div className='grid max-w-5xl grid-cols-4 py-20 mx-auto gap-x-4'>
+    <div className='grid max-w-5xl grid-cols-4 py-40 mx-auto gap-x-4'>
       {col.map((v, i) => (
         <Column
           index={i}
