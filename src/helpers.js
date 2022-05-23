@@ -1,15 +1,16 @@
 import Counter from './projects/react/counter-app';
 import KanbanBoard from './projects/react/kanban-board';
-import ProductManager from './projects/react/product-management-app';
+import GamesDictionary from './projects/react/games-dictionary';
 import Todolist from './projects/react/to-do-app';
 import { ProjectTypeMap } from './types';
+import Pokedex from './projects/react/pokedex-app';
 
 export function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 export const projects: ProjectTypeMap = {
-  html: [
+  'html': [
     {
       title: 'Simple Personal Intro Web Page',
       slug: 'simple-personal-intro-web-page',
@@ -26,7 +27,7 @@ export const projects: ProjectTypeMap = {
       subject: 'html',
     },
   ],
-  css: [
+  'css': [
     {
       title: 'Landkit components',
       slug: 'landkit-components',
@@ -36,7 +37,7 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
   ],
-  javaScript: [
+  'javaScript': [
     {
       title: 'Array method exercises',
       slug: 'array-method-exercises',
@@ -46,7 +47,7 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
   ],
-  react: [
+  'react': [
     {
       title: 'Counter App',
       slug: 'counter-app',
@@ -74,13 +75,13 @@ export const projects: ProjectTypeMap = {
       component: <KanbanBoard />,
     },
     {
-      title: 'Product management app',
-      slug: 'product-management-app',
+      title: 'Games dictionary',
+      slug: 'games-dictionary',
       description:
-        'A product management app that uses React Hooks and Tailwind CSS, including a pop up modal that allows users to input product information into a form then display the list of products as a result that allows for edition and deletion.',
+        'A games dictionary app that features a search bar and a list of games by categories, with a search result page and a pagination footer.',
       estimated_hours: 12,
       subject: 'react',
-      component: <ProductManager />,
+      component: <GamesDictionary />,
     },
     {
       title: 'Pokedex app',
@@ -89,6 +90,7 @@ export const projects: ProjectTypeMap = {
         'A pokedex app that utilizes the HTTP requests to fetch data from the real pokedex API, displaying the resulting pokemon data in a paginated list that allows for searching.',
       estimated_hours: 16,
       subject: 'react',
+      component: <Pokedex />,
     },
     {
       title: 'League of Legends app',
@@ -99,7 +101,7 @@ export const projects: ProjectTypeMap = {
       subject: 'react',
     },
   ],
-  backend: [
+  'backend': [
     {
       title: 'Movies API',
       slug: 'movies-api',

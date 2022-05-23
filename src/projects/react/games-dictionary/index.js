@@ -5,11 +5,14 @@ import games from './data.json';
 
 const ITEMS_PER_PAGE = 20;
 
-const ProductManager = () => {
+const GamesDictionary = () => {
   const [search, setSearch] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
   const [page, setPage] = React.useState(1);
+  const [activeCategory, setActiveCategory] = React.useState('all');
+
   const listRef = React.useRef(null);
+
   const categories = useMemo(() => {
     setIsLoading(true);
     return games.reduce((acc, game) => {
@@ -21,7 +24,6 @@ const ProductManager = () => {
       return acc;
     }, []);
   }, []);
-  const [activeCategory, setActiveCategory] = React.useState('all');
 
   const gamesInCategory = useMemo(() => {
     setIsLoading(true);
@@ -72,13 +74,14 @@ const ProductManager = () => {
 
   const isLastPage = page >= Math.ceil(gamesInCategory.length / ITEMS_PER_PAGE);
   const isFirstPage = page === 1;
+
   return (
-    <div className='py-40 h-screen bg-orange-50'>
+    <div className='h-screen py-40 bg-orange-50'>
       <div
-        className='max-w-6xl mx-auto grid grid-cols-6 shadow-xl'
+        className='grid max-w-6xl grid-cols-6 mx-auto shadow-xl'
         style={{ height: 768 }}
       >
-        <div className='col-span-2 flex flex-col space-y-4 overflow-y-scroll bg-white'>
+        <div className='flex flex-col col-span-2 space-y-4 overflow-y-scroll bg-white'>
           <nav className='space-y-1' aria-label='Sidebar'>
             <a
               onClick={() => setActiveCategory('all')}
@@ -143,20 +146,20 @@ const ProductManager = () => {
           }`}
           ref={listRef}
         >
-          <div className='sticky top-0 z-10 flex-shrink-0 flex h-16 shadow'>
-            <div className='flex-1 px-4 flex justify-between'>
-              <div className='flex-1 flex'>
-                <form className='w-full flex md:ml-0' action='#' method='GET'>
+          <div className='sticky top-0 z-10 flex flex-shrink-0 h-16 shadow'>
+            <div className='flex justify-between flex-1 px-4'>
+              <div className='flex flex-1'>
+                <form className='flex w-full md:ml-0' action='#' method='GET'>
                   <label htmlFor='search-field' className='sr-only'>
                     Search
                   </label>
                   <div className='relative w-full text-gray-400 focus-within:text-gray-600'>
                     <div className='absolute inset-y-0 left-0 flex items-center pointer-events-none'>
-                      <SearchIcon className='h-5 w-5' aria-hidden='true' />
+                      <SearchIcon className='w-5 h-5' aria-hidden='true' />
                     </div>
                     <input
                       id='search-field'
-                      className='block w-full h-full pl-8 pr-3 py-2 border-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm'
+                      className='block w-full h-full py-2 pl-8 pr-3 text-gray-900 placeholder-gray-500 border-transparent focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm'
                       placeholder='Search'
                       type='search'
                       name='search'
@@ -168,11 +171,11 @@ const ProductManager = () => {
               </div>
             </div>
           </div>
-          <ul role='list' className='divide-y divide-gray-200 p-2 min-h-full'>
+          <ul role='list' className='min-h-full p-2 divide-y divide-gray-200'>
             {isLoading ? (
               <div className='flex items-center justify-center py-10'>
                 <svg
-                  className='animate-spin -ml-1 mr-3 h-5 w-5 text-blue-500'
+                  className='w-5 h-5 mr-3 -ml-1 text-blue-500 animate-spin'
                   xmlns='http://www.w3.org/2000/svg'
                   fill='none'
                   viewBox='0 0 24 24'
@@ -197,13 +200,13 @@ const ProductManager = () => {
               gamesToDisplay.map((game) => (
                 <li
                   key={game.id}
-                  className='relative bg-white py-5 px-4 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-green-600'
+                  className='relative px-4 py-5 bg-white hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-green-600'
                 >
                   <div className='flex justify-between space-x-3'>
-                    <div className='min-w-0 flex-1'>
+                    <div className='flex-1 min-w-0'>
                       <a href='#' className='block focus:outline-none'>
                         <span className='absolute inset-0' aria-hidden='true' />
-                        <div className='inline-flex space-x-2 items-center'>
+                        <div className='inline-flex items-center space-x-2'>
                           {game.status === 'AVAILABLE' ? (
                             <span className='inline-flex h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse' />
                           ) : (
@@ -220,14 +223,14 @@ const ProductManager = () => {
                     </div>
                   </div>
                   <div className='mt-1'>
-                    <p className='line-clamp-2 text-sm text-gray-600'>
+                    <p className='text-sm text-gray-600 line-clamp-2'>
                       {game.genres.map((genre) => genre).join(', ')}
                     </p>
                   </div>
                 </li>
               ))
             ) : (
-              <div className='text-center py-10'>
+              <div className='py-10 text-center'>
                 <h3 className='mt-2 text-sm font-medium text-gray-900'>
                   No games found
                 </h3>
@@ -237,13 +240,13 @@ const ProductManager = () => {
                 <div className='mt-6'>
                   <button
                     type='button'
-                    className='inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500'
+                    className='inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500'
                     onClick={() => {
                       setSearch('');
                     }}
                   >
                     <RefreshIcon
-                      className='-ml-1 mr-2 h-5 w-5'
+                      className='w-5 h-5 mr-2 -ml-1'
                       aria-hidden='true'
                     />
                     Reset Search
@@ -253,7 +256,7 @@ const ProductManager = () => {
             )}
           </ul>
           <nav
-            className='bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6 sticky bottom-0 z-10'
+            className='sticky bottom-0 z-10 flex items-center justify-between px-4 py-3 bg-white border-t border-gray-200 sm:px-6'
             aria-label='Pagination'
           >
             <div className='hidden sm:block'>
@@ -272,7 +275,7 @@ const ProductManager = () => {
                 results
               </p>
             </div>
-            <div className='flex-1 flex justify-between sm:justify-end'>
+            <div className='flex justify-between flex-1 sm:justify-end'>
               <a
                 onClick={() => {
                   if (page > 1) {
@@ -311,4 +314,4 @@ const ProductManager = () => {
   );
 };
 
-export default ProductManager;
+export default GamesDictionary;
