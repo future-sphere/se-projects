@@ -4,6 +4,7 @@ import GamesDictionary from './projects/react/games-dictionary';
 import Todolist from './projects/react/to-do-app';
 import { ProjectTypeMap } from './types';
 import Pokedex from './projects/react/pokedex-app';
+import LandKitComponents from './projects/css/landkit-components'
 
 export function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -34,6 +35,7 @@ export const projects: ProjectTypeMap = {
       description:
         'Simple Landkit hero components that tests your knowledge of CSS property usages.',
       estimated_hours: 6,
+      component: <LandKitComponents />,
       subject: 'css',
     },
   ],
