@@ -33,8 +33,8 @@ export const projects: ProjectTypeMap = {
   ],
   css: [
     {
-      title: 'Landkit components',
-      slug: 'landkit-components',
+      title: 'Landkit components-one',
+      slug: 'landkit-components-one',
       description:
         'Simple Landkit hero components that tests your knowledge of CSS property usages.',
       estimated_hours: 6,
@@ -42,8 +42,8 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
     {
-      title: 'Landkit components',
-      slug: 'landkit-components',
+      title: 'Landkit components-two',
+      slug: 'landkit-components-two',
       description:
         'Simple Landkit hero components that tests your knowledge of CSS property usages.',
       estimated_hours: 6,
@@ -51,8 +51,8 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
     {
-      title: 'Landkit components',
-      slug: 'landkit-components',
+      title: 'Landkit components-three',
+      slug: 'landkit-components-three',
       description:
         'Simple Landkit hero components that tests your knowledge of CSS property usages.',
       estimated_hours: 6,
@@ -60,8 +60,8 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
     {
-      title: 'Landkit components',
-      slug: 'landkit-components',
+      title: 'Landkit components-four',
+      slug: 'landkit-components-four',
       description:
         'Simple Landkit hero components that tests your knowledge of CSS property usages.',
       estimated_hours: 6,
