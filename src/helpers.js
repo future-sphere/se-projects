@@ -4,14 +4,17 @@ import GamesDictionary from './projects/react/games-dictionary';
 import Todolist from './projects/react/to-do-app';
 import { ProjectTypeMap } from './types';
 import Pokedex from './projects/react/pokedex-app';
-import LandKitComponents from './projects/css/landkit-components'
+import LandKitComponentsOne from './projects/css/landkit-components-one';
+import LandKitComponentsTwo from './projects/css/landkit-components-two';
+import LandKitComponentsThree from './projects/css/landkit-components-three';
+import LandKitComponentsFour from './projects/css/landkit-components-four';
 
 export function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 export const projects: ProjectTypeMap = {
-  'html': [
+  html: [
     {
       title: 'Simple Personal Intro Web Page',
       slug: 'simple-personal-intro-web-page',
@@ -28,18 +31,45 @@ export const projects: ProjectTypeMap = {
       subject: 'html',
     },
   ],
-  'css': [
+  css: [
     {
       title: 'Landkit components',
       slug: 'landkit-components',
       description:
         'Simple Landkit hero components that tests your knowledge of CSS property usages.',
       estimated_hours: 6,
-      component: <LandKitComponents />,
+      component: <LandKitComponentsOne />,
+      subject: 'css',
+    },
+    {
+      title: 'Landkit components',
+      slug: 'landkit-components',
+      description:
+        'Simple Landkit hero components that tests your knowledge of CSS property usages.',
+      estimated_hours: 6,
+      component: <LandKitComponentsTwo />,
+      subject: 'css',
+    },
+    {
+      title: 'Landkit components',
+      slug: 'landkit-components',
+      description:
+        'Simple Landkit hero components that tests your knowledge of CSS property usages.',
+      estimated_hours: 6,
+      component: <LandKitComponentsThree />,
+      subject: 'css',
+    },
+    {
+      title: 'Landkit components',
+      slug: 'landkit-components',
+      description:
+        'Simple Landkit hero components that tests your knowledge of CSS property usages.',
+      estimated_hours: 6,
+      component: <LandKitComponentsFour />,
       subject: 'css',
     },
   ],
-  'javaScript': [
+  javaScript: [
     {
       title: 'Array method exercises',
       slug: 'array-method-exercises',
@@ -49,7 +79,7 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
   ],
-  'react': [
+  react: [
     {
       title: 'Counter App',
       slug: 'counter-app',
@@ -103,7 +133,7 @@ export const projects: ProjectTypeMap = {
       subject: 'react',
     },
   ],
-  'backend': [
+  backend: [
     {
       title: 'Movies API',
       slug: 'movies-api',
