@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  },
+  "rules": {
+    "no-console": "off",
+    "jsx-a11y/no-redundant-roles": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  }
+}

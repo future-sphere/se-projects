@@ -1,5 +1,3 @@
-import { XIcon } from '@heroicons/react/outline';
-import React from 'react';
 import { useCallback, useEffect, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import Modal from 'react-modal';
@@ -31,11 +29,11 @@ function LandingPage() {
         setData(result.results);
         setLoading(false);
       });
-  });
+  }, [page]);
 
   useEffect(() => {
     fetchData();
-  }, [page]);
+  }, [fetchData, page]);
 
   const handleSearch = () => {
     setLoading(true);
@@ -56,7 +54,7 @@ function LandingPage() {
     if (!input) {
       fetchData();
     }
-  }, [input]);
+  }, [fetchData, input]);
 
   const openModal = () => {
     setShowModal(true);
@@ -158,7 +156,7 @@ function LandingPage() {
         isOpen={showModal}
         onRequestClose={closeModal}
       >
-        <DetailsPage name={currentPokemon} closeModal={closeModal} />
+        <DetailsPage name={currentPokemon} />
       </Modal>
     </div>
   );

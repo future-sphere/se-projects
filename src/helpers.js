@@ -3,18 +3,22 @@ import KanbanBoard from './projects/react/kanban-board';
 import GamesDictionary from './projects/react/games-dictionary';
 import Todolist from './projects/react/to-do-app';
 import { ProjectTypeMap } from './types';
+import Board from './projects/react/15-blocks-board';
+import ImageSwapper from './projects/react/image-swapper';
 import Pokedex from './projects/react/pokedex-app';
 import LandKitComponentsOne from './projects/css/landkit-components-one';
 import LandKitComponentsTwo from './projects/css/landkit-components-two';
 import LandKitComponentsThree from './projects/css/landkit-components-three';
 import LandKitComponentsFour from './projects/css/landkit-components-four';
+import React from 'react';
+
 
 export function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 export const projects: ProjectTypeMap = {
-  html: [
+  'html': [
     {
       title: 'Simple Personal Intro Web Page',
       slug: 'simple-personal-intro-web-page',
@@ -31,7 +35,7 @@ export const projects: ProjectTypeMap = {
       subject: 'html',
     },
   ],
-  css: [
+  'css': [
     {
       title: 'Landkit components-one',
       slug: 'landkit-components-one',
@@ -69,17 +73,65 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
   ],
-  javaScript: [
+  'javascript': [
     {
       title: 'Array method exercises',
       slug: 'array-method-exercises',
       description:
         'A collection of exercises that test your knowledge of JavaScript array methods.',
+      estimated_hours: 2,
+      subject: 'javascript',
+    },
+    {
+      title: 'Stock Exchange Account Class',
+      slug: 'stock-exchange',
+      description:
+        'Designing a stock exchange account class that can buy and sell stocks, that tests your knowledge of JavaScript.',
+      estimated_hours: 2,
+      subject: 'javascript',
+    },
+    {
+      title: 'Bank Account Class',
+      slug: 'bank-account',
+      description:
+        'Designing a bank account class that can withdraw and deposit cash, that tests your knowledge of JavaScript.',
+      estimated_hours: 2,
+      subject: 'javascript',
+    },
+    {
+      title: 'Shopping Cart Class',
+      slug: 'shopping-cart',
+      description:
+        'Designing a shopping cart class that can add, remove and lookup items with quantity, that tests your knowledge of JavaScript.',
+      estimated_hours: 3,
+      subject: 'javascript',
+    },
+    {
+      title: 'Library Class',
+      slug: 'library',
+      description:
+        'Designing a library class that can store books with title, author and allow users to borrow and return books, that tests your knowledge of JavaScript.',
       estimated_hours: 4,
-      subject: 'css',
+      subject: 'javascript',
+    },
+    {
+      title: 'Calculator Class',
+      slug: 'calculator',
+      description:
+        'Designing a simple calculator class that can do basic arithmetics, that tests your knowledge of JavaScript.',
+      estimated_hours: 1,
+      subject: 'javascript',
+    },
+    {
+      title: 'Timer Class',
+      slug: 'timer',
+      description:
+        'Designing a timer class that can start and stop time, while printing out the time in format, that tests your knowledge of JavaScript.',
+      estimated_hours: 3,
+      subject: 'javascript',
     },
   ],
-  react: [
+  'react': [
     {
       title: 'Counter App',
       slug: 'counter-app',
@@ -89,6 +141,16 @@ export const projects: ProjectTypeMap = {
       component: <Counter />,
       subject: 'react',
     },
+    {
+      title: 'Image Swapper App',
+      slug: 'image-swapper',
+      description:
+        'A simple image swapper app that tests your knowledge of event listeners and states',
+      estimated_hours: 4,
+      component: <ImageSwapper />,
+      subject: 'react',
+    },
+
     {
       title: 'To-Do App',
       slug: 'to-do-app',
@@ -105,6 +167,14 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 8,
       subject: 'react',
       component: <KanbanBoard />,
+    },
+    {
+      title: '15 Blocks Board',
+      slug: '15-blocks-board',
+      description: 'Use React and array methods to create a fun board game.',
+      estimated_hours: 8,
+      subject: 'react',
+      component: <Board />,
     },
     {
       title: 'Games dictionary',
@@ -133,7 +203,7 @@ export const projects: ProjectTypeMap = {
       subject: 'react',
     },
   ],
-  backend: [
+  'backend': [
     {
       title: 'Movies API',
       slug: 'movies-api',
