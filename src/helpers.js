@@ -3,7 +3,10 @@ import KanbanBoard from './projects/react/kanban-board';
 import GamesDictionary from './projects/react/games-dictionary';
 import Todolist from './projects/react/to-do-app';
 import { ProjectTypeMap } from './types';
+import Board from './projects/react/15-blocks-board';
+import ImageSwapper from './projects/react/image-swapper';
 import Pokedex from './projects/react/pokedex-app';
+import React from 'react';
 
 export function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -58,6 +61,16 @@ export const projects: ProjectTypeMap = {
       subject: 'react',
     },
     {
+      title: 'Image Swapper App',
+      slug: 'image-swapper',
+      description:
+        'A simple image swapper app that tests your knowledge of event listeners and states',
+      estimated_hours: 4,
+      component: <ImageSwapper />,
+      subject: 'react',
+    },
+
+    {
       title: 'To-Do App',
       slug: 'to-do-app',
       description: 'A simple to-do app that uses React Hooks and Tailwind CSS.',
@@ -73,6 +86,14 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 8,
       subject: 'react',
       component: <KanbanBoard />,
+    },
+    {
+      title: '15 Blocks Board',
+      slug: '15-blocks-board',
+      description: 'Use React and array methods to create a fun board game.',
+      estimated_hours: 8,
+      subject: 'react',
+      component: <Board />,
     },
     {
       title: 'Games dictionary',

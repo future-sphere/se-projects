@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo } from 'react';
 import { RefreshIcon, SearchIcon } from '@heroicons/react/outline';
 
-import games from './data.json';
+import { data } from './data.json';
 
 const ITEMS_PER_PAGE = 20;
 
@@ -15,7 +15,7 @@ const GamesDictionary = () => {
 
   const categories = useMemo(() => {
     setIsLoading(true);
-    return games.reduce((acc, game) => {
+    return data.reduce((acc, game) => {
       game.genres.forEach((genre) => {
         if (!acc.includes(genre)) {
           acc.push(genre);
@@ -27,7 +27,7 @@ const GamesDictionary = () => {
 
   const gamesInCategory = useMemo(() => {
     setIsLoading(true);
-    return games
+    return data
       .filter((game) => {
         if (activeCategory === 'all') {
           return true;
@@ -103,12 +103,12 @@ const GamesDictionary = () => {
                   'ml-auto inline-block py-0.5 px-3 text-xs rounded-full',
                 )}
               >
-                {games.length}
+                {data.length}
               </span>
             </a>
             {categories.map((item, index) => {
               const isActive = activeCategory === item;
-              const count = games.filter((game) =>
+              const count = data.filter((game) =>
                 game.genres.includes(item),
               ).length;
               return (
