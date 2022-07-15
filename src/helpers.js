@@ -6,7 +6,12 @@ import { ProjectTypeMap } from './types';
 import Board from './projects/react/15-blocks-board';
 import ImageSwapper from './projects/react/image-swapper';
 import Pokedex from './projects/react/pokedex-app';
+import LandKitComponentsOne from './projects/css/landkit-components-one';
+import LandKitComponentsTwo from './projects/css/landkit-components-two';
+import LandKitComponentsThree from './projects/css/landkit-components-three';
+import LandKitComponentsFour from './projects/css/landkit-components-four';
 import React from 'react';
+
 
 export function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -32,11 +37,39 @@ export const projects: ProjectTypeMap = {
   ],
   'css': [
     {
-      title: 'Landkit components',
-      slug: 'landkit-components',
+      title: 'Landkit components-one',
+      slug: 'landkit-components-one',
       description:
         'Simple Landkit hero components that tests your knowledge of CSS property usages.',
       estimated_hours: 6,
+      component: <LandKitComponentsOne />,
+      subject: 'css',
+    },
+    {
+      title: 'Landkit components-two',
+      slug: 'landkit-components-two',
+      description:
+        'Simple Landkit hero components that tests your knowledge of CSS property usages.',
+      estimated_hours: 6,
+      component: <LandKitComponentsTwo />,
+      subject: 'css',
+    },
+    {
+      title: 'Landkit components-three',
+      slug: 'landkit-components-three',
+      description:
+        'Simple Landkit hero components that tests your knowledge of CSS property usages.',
+      estimated_hours: 6,
+      component: <LandKitComponentsThree />,
+      subject: 'css',
+    },
+    {
+      title: 'Landkit components-four',
+      slug: 'landkit-components-four',
+      description:
+        'Simple Landkit hero components that tests your knowledge of CSS property usages.',
+      estimated_hours: 6,
+      component: <LandKitComponentsFour />,
       subject: 'css',
     },
   ],
