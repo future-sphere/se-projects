@@ -40,14 +40,62 @@ export const projects: ProjectTypeMap = {
       subject: 'css',
     },
   ],
-  'javaScript': [
+  'javascript': [
     {
       title: 'Array method exercises',
       slug: 'array-method-exercises',
       description:
         'A collection of exercises that test your knowledge of JavaScript array methods.',
+      estimated_hours: 2,
+      subject: 'javascript',
+    },
+    {
+      title: 'Stock Exchange Account Class',
+      slug: 'stock-exchange',
+      description:
+        'Designing a stock exchange account class that can buy and sell stocks, that tests your knowledge of JavaScript.',
+      estimated_hours: 2,
+      subject: 'javascript',
+    },
+    {
+      title: 'Bank Account Class',
+      slug: 'bank-account',
+      description:
+        'Designing a bank account class that can withdraw and deposit cash, that tests your knowledge of JavaScript.',
+      estimated_hours: 2,
+      subject: 'javascript',
+    },
+    {
+      title: 'Shopping Cart Class',
+      slug: 'shopping-cart',
+      description:
+        'Designing a shopping cart class that can add, remove and lookup items with quantity, that tests your knowledge of JavaScript.',
+      estimated_hours: 3,
+      subject: 'javascript',
+    },
+    {
+      title: 'Library Class',
+      slug: 'library',
+      description:
+        'Designing a library class that can store books with title, author and allow users to borrow and return books, that tests your knowledge of JavaScript.',
       estimated_hours: 4,
-      subject: 'css',
+      subject: 'javascript',
+    },
+    {
+      title: 'Calculator Class',
+      slug: 'calculator',
+      description:
+        'Designing a simple calculator class that can do basic arithmetics, that tests your knowledge of JavaScript.',
+      estimated_hours: 1,
+      subject: 'javascript',
+    },
+    {
+      title: 'Timer Class',
+      slug: 'timer',
+      description:
+        'Designing a timer class that can start and stop time, while printing out the time in format, that tests your knowledge of JavaScript.',
+      estimated_hours: 3,
+      subject: 'javascript',
     },
   ],
   'react': [

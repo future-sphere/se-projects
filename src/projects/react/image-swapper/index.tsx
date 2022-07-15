@@ -20,30 +20,30 @@ const data = [
 const ImageSwapper = (props: Props) => {
   const [index, setIndex] = React.useState(0);
   return (
-    <div className='flex items-center justify-center h-screen p-10 bg-slate-100'>
+    <div className='flex items-center justify-center h-screen p-10 bg-slate-300'>
       <div className='flex items-center justify-between space-x-20'>
         <ArrowLeftIcon
           onClick={() => setIndex(index === 0 ? data.length - 1 : index - 1)}
           className='w-20 h-20 p-2 duration-700 bg-white cursor-pointer rounded-xl hover:shadow-2xl'
         />
-        <div className='relative w-full min-w-[400px] h-72 select-none'>
+        <div className='relative w-full min-w-[1024px] h-[600px] select-none left-8 bottom-8'>
           <img
             className='absolute top-0 left-0 object-cover shadow-xl rounded-xl'
             src={data[index]}
             alt='Anivia Champion Skin'
           />
           <img
-            className='absolute object-cover w-full h-full shadow-xl -left-2 top-2 rounded-xl'
+            className='absolute object-cover w-full h-full shadow-xl -left-8 top-8 rounded-xl'
             src={index === data.length - 1 ? data[0] : data[index + 1]}
             alt='Anivia Champion Skin'
           />
           <img
-            className='absolute object-cover w-full h-full shadow-xl -left-4 top-4 rounded-xl'
+            className='absolute object-cover w-full h-full shadow-xl -left-16 top-16 rounded-xl'
             src={
               index === data.length - 1
-                ? index === data.length - 2
-                  ? data[0]
-                  : data[1]
+                ? data[1]
+                : index === data.length - 2
+                ? data[0]
                 : data[index + 2]
             }
             alt='Anivia Champion Skin'

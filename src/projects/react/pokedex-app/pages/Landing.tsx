@@ -33,7 +33,7 @@ function LandingPage() {
 
   useEffect(() => {
     fetchData();
-  }, [page]);
+  }, [fetchData, page]);
 
   const handleSearch = () => {
     setLoading(true);
@@ -54,7 +54,7 @@ function LandingPage() {
     if (!input) {
       fetchData();
     }
-  }, [input]);
+  }, [fetchData, input]);
 
   const openModal = () => {
     setShowModal(true);

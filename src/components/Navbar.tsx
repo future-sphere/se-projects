@@ -1,6 +1,5 @@
-import { ArrowDownIcon } from '@heroicons/react/solid';
 import React, { useEffect } from 'react';
-import { Link, useLocation, useRoutes } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 type Props = {};
 
@@ -40,21 +39,21 @@ const Navbar = (props: Props) => {
           }`}
       >
         <nav
-          className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
+          className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'
           aria-label='Top'
         >
-          <div className='w-full py-6 flex items-center justify-between border-b border-blue-500 lg:border-none'>
+          <div className='flex items-center justify-between w-full py-6 border-b border-blue-500 lg:border-none'>
             <div className='flex items-center'>
               <Link to='/'>
                 <span className='sr-only'>Future Sphere Projects</span>
                 <img
-                  className='h-10 w-auto'
+                  className='w-auto h-10'
                   src='https://res.cloudinary.com/dtgh01qqo/image/upload/v1571287441/FutureSphere/fslogo.png'
                   alt='logo'
                 />
               </Link>
               <Link to='/'>
-                <span className='text-lg font-medium text-white ml-4'>
+                <span className='ml-4 text-lg font-medium text-white'>
                   Project Demo
                 </span>
               </Link>
@@ -73,13 +72,13 @@ const Navbar = (props: Props) => {
             <div className='ml-10 space-x-4'>
               <button
                 onClick={() => setShow(false)}
-                className='inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-blue-600 hover:bg-blue-50'
+                className='inline-block px-4 py-2 text-base font-medium text-blue-600 bg-white border border-transparent rounded-md hover:bg-blue-50'
               >
                 Hide Menu
               </button>
             </div>
           </div>
-          <div className='py-4 flex flex-wrap justify-center space-x-6 lg:hidden'>
+          <div className='flex flex-wrap justify-center py-4 space-x-6 lg:hidden'>
             {navigation.map((link) => (
               <a
                 key={link.name}
