@@ -1,11 +1,11 @@
 const LandKitComponentsThree = () => {
   return (
-    <div className='py-5 pl-5 bg-white w-fit lg:pt-[6rem] pt-[10rem]'>
-      <div className='md:text-[1.7em] text-[1.5em] max-w-[24rem]'>
+    <div className='py-5 pt-40 pl-5 bg-white w-fit lg:pt-24'>
+      <div className='md:text-3xl text-2xl max-w-[24rem]'>
         We have a lot of experience
-        <span className='text-[#345cec]'> building Bootstrap themes</span>.
+        <span className='text-blue-600'> building Bootstrap themes</span>.
       </div>
-      <div className='text-[#8a9cb9] py-5 text-[1.05rem] max-w-[28rem]'>
+      <div className='max-w-md pt-2 pb-4 text-lg text-slate-400'>
         We've built well over a dozen Bootstrap themes and sold tens of
         thousands of copies.
       </div>
@@ -33,7 +33,7 @@ const LandKitComponentsThree = () => {
           </div>
           <div className='flex-col leading-7'>
             <div>Bootstrap users since the beginning</div>
-            <div className='text-[#8a9cb9] max-w-[22rem] text-[.92rem]'>
+            <div className='text-slate-400 max-w-[22rem]'>
               We've been developing with Bootstrap since it was publicly
               released in 2011.
             </div>
@@ -67,7 +67,7 @@ const LandKitComponentsThree = () => {
           </div>
           <div className='flex-col leading-7'>
             <div>Deep understanding of Bootstrap</div>
-            <div className='text-[#8a9cb9] max-w-[22rem] text-[.92rem]'>
+            <div className='text-slate-400 max-w-[22rem]'>
               We've watched Bootstrap grow up over the years and understand it
               better than almost anyone.
             </div>
