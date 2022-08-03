@@ -1,10 +1,10 @@
 const LandKitComponentsFour = () => {
   return (
     <div className='pt-40 lg:pt-24'>
-      <div className='bg-[#f1f4f8] py-5 pl-5 w-fit'>
-        <div className='text-[1.7em] leading-10'>
+      <div className='py-5 pl-5 bg-slate-100 w-fit'>
+        <div className='text-3xl leading-10'>
           <div>Stay focused on your business.</div>
-          <div className='bg-blue-600'>
+          <div className='text-blue-600'>
             Let us handle the design<span className='text-black'>.</span>
           </div>
         </div>
