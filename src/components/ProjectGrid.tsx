@@ -9,6 +9,11 @@ type Props = {
 };
 
 const ProjectGrid = ({ projects, subject }: Props) => {
+  let filetype = '';
+  
+  if (subject === 'css' || subject === 'react') filetype = 'tsx';
+  else if (subject === 'javascript') filetype = 'ts';
+  
   return (
     <div className='grid grid-cols-1 mt-4 divide-y gap-y-8'>
       {projects.map((project) => (
@@ -40,7 +45,7 @@ const ProjectGrid = ({ projects, subject }: Props) => {
             )}
             <a
               target={'_blank'}
-              href={`https://github.com/future-sphere/se-projects/blob/master/src/projects/${project.subject}/${project.slug}/index.tsx`}
+              href={`https://github.com/future-sphere/se-projects/blob/master/src/projects/${project.subject}/${project.slug}/index.${filetype}`}
               className='flex items-center gap-1 text-blue-600 hover:text-blue-900'
               rel='noreferrer'
             >
