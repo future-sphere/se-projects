@@ -18,7 +18,7 @@ export function classNames(...classes) {
 }
 
 export const projects: ProjectTypeMap = {
-  'html': [
+  html: [
     {
       title: 'Simple Personal Intro Web Page',
       slug: 'simple-personal-intro-web-page',
@@ -35,7 +35,7 @@ export const projects: ProjectTypeMap = {
       subject: 'html',
     },
   ],
-  'css': [
+  css: [
     {
       title: 'Landkit components-one',
       slug: 'landkit-components-one',
@@ -44,6 +44,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 6,
       component: <LandKitComponentsOne />,
       subject: 'css',
+      file_extension: 'js',
     },
     {
       title: 'Landkit components-two',
@@ -53,6 +54,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 6,
       component: <LandKitComponentsTwo />,
       subject: 'css',
+      file_extension: 'js',
     },
     {
       title: 'Landkit components-three',
@@ -62,6 +64,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 6,
       component: <LandKitComponentsThree />,
       subject: 'css',
+      file_extension: 'js',
     },
     {
       title: 'Landkit components-four',
@@ -71,9 +74,10 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 6,
       component: <LandKitComponentsFour />,
       subject: 'css',
+      file_extension: 'js',
     },
   ],
-  'javascript': [
+  javascript: [
     {
       title: 'Array method exercises',
       slug: 'array-method-exercises',
@@ -81,6 +85,7 @@ export const projects: ProjectTypeMap = {
         'A collection of exercises that test your knowledge of JavaScript array methods.',
       estimated_hours: 2,
       subject: 'javascript',
+      file_extension: 'ts',
     },
     {
       title: 'Stock Exchange Account Class',
@@ -89,6 +94,7 @@ export const projects: ProjectTypeMap = {
         'Designing a stock exchange account class that can buy and sell stocks, that tests your knowledge of JavaScript.',
       estimated_hours: 2,
       subject: 'javascript',
+      file_extension: 'ts',
     },
     {
       title: 'Bank Account Class',
@@ -97,6 +103,7 @@ export const projects: ProjectTypeMap = {
         'Designing a bank account class that can withdraw and deposit cash, that tests your knowledge of JavaScript.',
       estimated_hours: 2,
       subject: 'javascript',
+      file_extension: 'ts',
     },
     {
       title: 'Shopping Cart Class',
@@ -105,6 +112,7 @@ export const projects: ProjectTypeMap = {
         'Designing a shopping cart class that can add, remove and lookup items with quantity, that tests your knowledge of JavaScript.',
       estimated_hours: 3,
       subject: 'javascript',
+      file_extension: 'ts',
     },
     {
       title: 'Library Class',
@@ -113,6 +121,7 @@ export const projects: ProjectTypeMap = {
         'Designing a library class that can store books with title, author and allow users to borrow and return books, that tests your knowledge of JavaScript.',
       estimated_hours: 4,
       subject: 'javascript',
+      file_extension: 'ts',
     },
     {
       title: 'Calculator Class',
@@ -121,6 +130,7 @@ export const projects: ProjectTypeMap = {
         'Designing a simple calculator class that can do basic arithmetics, that tests your knowledge of JavaScript.',
       estimated_hours: 1,
       subject: 'javascript',
+      file_extension: 'ts',
     },
     {
       title: 'Timer Class',
@@ -129,9 +139,10 @@ export const projects: ProjectTypeMap = {
         'Designing a timer class that can start and stop time, while printing out the time in format, that tests your knowledge of JavaScript.',
       estimated_hours: 3,
       subject: 'javascript',
+      file_extension: 'ts',
     },
   ],
-  'react': [
+  react: [
     {
       title: 'Counter App',
       slug: 'counter-app',
@@ -140,6 +151,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 4,
       component: <Counter />,
       subject: 'react',
+      file_extension: 'tsx',
     },
     {
       title: 'Image Swapper App',
@@ -149,6 +161,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 4,
       component: <ImageSwapper />,
       subject: 'react',
+      file_extension: 'tsx',
     },
 
     {
@@ -158,6 +171,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 6,
       subject: 'react',
       component: <Todolist />,
+      file_extension: 'tsx',
     },
     {
       title: 'Kanban Board',
@@ -167,6 +181,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 8,
       subject: 'react',
       component: <KanbanBoard />,
+      file_extension: 'tsx',
     },
     {
       title: '15 Blocks Board',
@@ -175,6 +190,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 8,
       subject: 'react',
       component: <Board />,
+      file_extension: 'tsx',
     },
     {
       title: 'Games dictionary',
@@ -184,6 +200,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 12,
       subject: 'react',
       component: <GamesDictionary />,
+      file_extension: 'tsx',
     },
     {
       title: 'Pokedex app',
@@ -193,6 +210,7 @@ export const projects: ProjectTypeMap = {
       estimated_hours: 16,
       subject: 'react',
       component: <Pokedex />,
+      file_extension: 'tsx',
     },
     {
       title: 'League of Legends app',
@@ -203,7 +221,7 @@ export const projects: ProjectTypeMap = {
       subject: 'react',
     },
   ],
-  'backend': [
+  backend: [
     {
       title: 'Movies API',
       slug: 'movies-api',

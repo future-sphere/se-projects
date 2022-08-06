@@ -1,30 +1,30 @@
 const LandKitComponentsFour = () => {
   return (
-    <div className='lg:pt-[6rem] pt-[10rem]'>
-      <div className='bg-[#f1f4f8] py-5 pl-5 w-fit'>
-        <div className='text-[1.7em] leading-10'>
+    <div className='pt-40 lg:pt-24'>
+      <div className='py-5 pl-5 bg-slate-100 w-fit'>
+        <div className='text-3xl leading-10'>
           <div>Stay focused on your business.</div>
-          <div className='text-[#345cec]'>
+          <div className='text-blue-600'>
             Let us handle the design<span className='text-black'>.</span>
           </div>
         </div>
-        <div className='text-[#536892] max-w-[28rem] text-[1.05em] pt-5 pb-8'>
+        <div className='text-slate-500 max-w-[28rem] text-lg pt-5 pb-8'>
           You have a business to run. Stop worrying about cross-browser bugs,
           designing new pages, keeping your components up to date. Let us do
           that for you.
         </div>
         <div className='flex'>
           <div className='flex-col'>
-            <div className='text-[1.1em]'>100%</div>
-            <div className='text-[#536892]'>Satisfaction</div>
+            <div className='text-lg'>100%</div>
+            <div className='text-slate-500'>Satisfaction</div>
           </div>
           <div className='flex-col px-9'>
-            <div className='text-[1.1em]'>24/ 7</div>
-            <div className='text-[#536892]'>Support</div>
+            <div className='text-lg'>24/ 7</div>
+            <div className='text-slate-500'>Support</div>
           </div>
           <div className='flex-col'>
-            <div className='text-[1.1em]'>100k+</div>
-            <div className='text-[#536892]'>Sales</div>
+            <div className='text-lg'>100k+</div>
+            <div className='text-slate-500'>Sales</div>
           </div>
         </div>
       </div>
