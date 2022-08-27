@@ -10,6 +10,7 @@ import LandKitComponentsOne from './projects/css/landkit-components-one';
 import LandKitComponentsTwo from './projects/css/landkit-components-two';
 import LandKitComponentsThree from './projects/css/landkit-components-three';
 import LandKitComponentsFour from './projects/css/landkit-components-four';
+import LeagueOfLegendsApp from './projects/react/league-of-legends-app';
 import React from 'react';
 
 
@@ -218,6 +219,8 @@ export const projects: ProjectTypeMap = {
       description:
         "A League of Legends app that utilizes the Riot API and displays all champions in a list with their respective images, each champion has a button that allows for the user to click on it to display the champion's profile page that displays the champion's stats, skins and abilities",
       estimated_hours: 20,
+      component: <LeagueOfLegendsApp />,
+      file_extension: 'tsx',
       subject: 'react',
     },
   ],
