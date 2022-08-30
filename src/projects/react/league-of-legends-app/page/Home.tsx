@@ -18,7 +18,7 @@ const HomePage = (props: Props) => {
   useEffect(() => {
     axios
       .get(
-        'http://ddragon.leagueoflegends.com/cdn/12.14.1/data/en_US/champion.json'
+        'https://ddragon.leagueoflegends.com/cdn/12.14.1/data/en_US/champion.json'
       )
       .then((res) => {
         setChampions(Object.values(res.data.data));

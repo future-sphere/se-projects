@@ -13,7 +13,7 @@ const DetailPage = (props: Props) => {
   React.useEffect(() => {
     axios
       .get(
-        `http://ddragon.leagueoflegends.com/cdn/12.15.1/data/en_US/champion/${name}.json`
+        `https://ddragon.leagueoflegends.com/cdn/12.15.1/data/en_US/champion/${name}.json`
       )
       .then((res) => {
         setChampion(res.data.data[name as string]);
@@ -45,7 +45,7 @@ const DetailPage = (props: Props) => {
                 className='flex items-center justify-center rounded-lg'
               >
                 <img
-                  src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_${skin.num}.jpg`}
+                  src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${name}_${skin.num}.jpg`}
                   alt={skin.name}
                   className='rounded-lg'
                 />
