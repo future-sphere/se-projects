@@ -17,8 +17,8 @@ const categories = [
   },
   {
     id: 3,
-    name: 'Strategy',
-    slug: 'strategy',
+    name: 'Shooter',
+    slug: 'shooter',
   },
   {
     id: 4,
@@ -85,5 +85,70 @@ const games: Game[] = [
     price: 0,
     image:
       'https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/League_of_Legends_logo.png/220px-League_of_Legends_logo.png',
-  },
+    },
+    {
+        id: 4,
+        title: 'Overwatch',
+        slug: 'overwatch',
+        description:
+            'Overwatch is a team-based multiplayer online battle arena video game developed and published by Blizzard Entertainment.',
+        categorySlug: 'rpg',
+        price: 0,
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/League_of_Legends_logo.png/220px-League_of_Legends_logo.png',
+    },
+    {
+        id: 5,
+        title: 'Dota 2',
+        slug: 'dota-2',
+        description:
+            'Dota 2 is a multiplayer online battle arena video game developed and published by Valve Corporation.',
+        categorySlug: 'mmorpg', 
+        price: 0,
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/League_of_Legends_logo.png/220px-League_of_Legends_logo.png',
+    },
+    {
+        id: 6,
+        title: 'Counter-Strike: Global Offensive',
+        slug: 'counter-strike-global-offensive',
+        description:
+
+            'Counter-Strike: Global Offensive (CS: GO) is a first-person shooter video game developed and published by Valve Corporation.',
+        categorySlug: 'shooter',
+        price: 0,
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/League_of_Legends_logo.png/220px-League_of_Legends_logo.png',  
+    },
+    {
+        id: 7,
+        title: 'Call of Duty: Modern Warfare',
+        slug: 'call-of-duty-modern-warfare',
+        description:
+            'Call of Duty: Modern Warfare is a first-person shooter video game developed by Infinity Ward and published by Activision.',
+        categorySlug: 'shooter',
+        price: 0,
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/League_of_Legends_logo.png/220px-League_of_Legends_logo.png',
+    },
+    {
+        id: 8,
+        title: 'Call of Duty: Black Ops',
+        slug: 'call-of-duty-black-ops',
+        description:
+            'Call of Duty: Black Ops is a first-person shooter video game developed by Infinity Ward and published by Activision.',
+        categorySlug: 'shooter',
+        price: 0,
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/League_of_Legends_logo.png/220px-League_of_Legends_logo.png',
+    },
+    {
+        id: 9,
+        title: 'Call of Duty: Ghosts',
+        slug: 'call-of-duty-ghosts',
+        description:
+            'Call of Duty: Ghosts is a first-person shooter video game developed by Infinity Ward and published by Activision.',
+        categorySlug: 'shooter',
+        price: 0,
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/League_of_Legends_logo.png/220px-League_of_Legends_logo.png',
+    },
+    {
+        id: 10,
+        title: 'World of Warcraft',
+
 ];
