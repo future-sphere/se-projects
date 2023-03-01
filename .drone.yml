@@ -1,0 +1,26 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: build
+    image: node:18
+    commands:
+      - unset CI
+      - npm install
+      - npm run build
+
+  - name: deploy
+    image: plugins/s3-sync:1
+    settings:
+      bucket: se-projects.thefuturesphere.com
+      access_key:
+        from_secret: AWS_ID
+      secret_key:
+        from_secret: AWS_KEY
+      acl: public-read
+      source: build/
+      target: /
+      when:
+        branch:
+          - master
