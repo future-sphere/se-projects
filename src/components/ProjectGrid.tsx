@@ -1,4 +1,4 @@
-import { CodeIcon, EyeIcon } from '@heroicons/react/solid';
+import { CodeIcon, EyeIcon, StarIcon } from '@heroicons/react/solid';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Project } from '../types';
@@ -29,6 +29,17 @@ const ProjectGrid = ({ projects, subject }: Props) => {
           <p className='text-xl font-semibold text-gray-900'>{project.title}</p>
           <p className='mt-3 text-base text-gray-500'>{project.description}</p>
           <div className='flex items-center gap-5 mt-3 font-mono text-xs'>
+            {project.requirement_link && (
+              <a
+                target={'_blank'}
+                href={project.requirement_link}
+                className='flex items-center gap-1 text-blue-600 hover:text-blue-900'
+                rel='noreferrer'
+              >
+                <StarIcon className='h-4' />
+                View Requirements
+              </a>
+            )}
             {project.component && (
               <Link
                 to={`/${subject}/projects/${project.slug}`}

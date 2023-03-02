@@ -13,7 +13,6 @@ import LandKitComponentsFour from './projects/css/landkit-components-four';
 import LeagueOfLegendsApp from './projects/react/league-of-legends-app';
 import React from 'react';
 
-
 export function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
@@ -80,10 +79,21 @@ export const projects: ProjectTypeMap = {
   ],
   javascript: [
     {
-      title: 'Array method exercises',
-      slug: 'array-method-exercises',
+      title: 'Array method exercises I',
+      slug: 'array-method-exercises-1',
       description:
         'A collection of exercises that test your knowledge of JavaScript array methods.',
+      estimated_hours: 2,
+      subject: 'javascript',
+      file_extension: 'ts',
+    },
+    {
+      title: 'Array method exercises II',
+      slug: 'array-method-exercises-2',
+      requirement_link:
+        'https://noiseless-insect-94c.notion.site/Employees-Array-Practice-69b6fdb5d0e34e099e63c8515e64ecbd',
+      description:
+        'A collection of exercises that test your knowledge of JavaScript array methods with a bigger dataset.',
       estimated_hours: 2,
       subject: 'javascript',
       file_extension: 'ts',
